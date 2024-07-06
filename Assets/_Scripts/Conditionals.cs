@@ -13,7 +13,7 @@ public class Conditionals : MonoBehaviour
     
     * else: if the condition is not true, other code is run (only on any conditions, not always)
     
-    COMPLETE SINTAX:
+    SYNTAX:
 
     if (certain true condition)
     {

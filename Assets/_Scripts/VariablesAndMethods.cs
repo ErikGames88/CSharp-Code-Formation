@@ -12,7 +12,7 @@ public class VariablesAndMethods : MonoBehaviour
     /* VARIABLES:
      * Access Modifier (public / private / protected / internal)
      * Data type (byte /int / float / double / string / bool)
-     * Variable's name
+     * Variable name
      * Set default value (Optional)
      * Semicolon */
     
@@ -115,7 +115,7 @@ public class VariablesAndMethods : MonoBehaviour
         Debug.Log(currentAge + addedAge);
     }
     
-    // TODO: Used when something has not been done previously for any reason and show the task "to do" 
+    // TODO: Used when something has not been done previously for any reason and show the task with "to do" 
 
     void CreateCharacter()
     {
