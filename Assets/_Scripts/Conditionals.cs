@@ -257,8 +257,5 @@ public class Conditionals : MonoBehaviour
         
     } 
 
-    void Update()
-    {
-        
-    }
+    
 }

@@ -117,9 +117,9 @@ public class DataStructures : MonoBehaviour
         Debug.Log(hyruleCharacters); // Final result after changes
 
         // Checking each element in the list using the foreach loop
-        foreach(string characters in hyruleCharacters)
+        for (int i = 0; i < hyruleCharacters.Count; i++)
         {
-          Debug.Log(characters); // Link, Midna, Ganondorf
+            Debug.LogFormat("Index: {0} - {1}", i, hyruleCharacters[i]); // Print values from the list
         }
 
         
@@ -163,9 +163,5 @@ public class DataStructures : MonoBehaviour
         
      }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
 }
