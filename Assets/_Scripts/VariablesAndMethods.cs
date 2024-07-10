@@ -8,6 +8,18 @@ public class VariablesAndMethods : MonoBehaviour
     /* This is an
      over one
      line remark */
+
+    
+    /* CLASSES. Sintax:
+    
+    accessModifier class UniqueName
+    {
+        Variables
+        Methods   
+        Constructors
+    }
+    
+    */
     
     /* VARIABLES:
      * Access Modifier (public / private / protected / internal)
