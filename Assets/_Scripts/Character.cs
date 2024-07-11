@@ -5,10 +5,12 @@ using UnityEngine;
 public class Character 
 {
     /*
+    *WATCH OUT!*: "LearningCode" is the other class used for this template to create "characters"
+
+    * It is declared with the keyword "class" and an unique name (Character)
     * Empty class not inherited from MonoBehaviour
     * Character is registered as a public class
     * It is a public template (a blueprint) that any other class can use to create characters
-    * WATCH OUT!: "LearningCode" is the other class used for this template to create "characters"
     * INSTANTIATE: Create an object from a specific set of instructions
        - Create a copy of this class (Remember: In LearningCode)
     * INSTANCE: The object that is created from the template (from this Character class to the LearningCode class)
@@ -61,7 +63,11 @@ public class Character
 
     public void PrintStatsInfo() // Used to compress code and make it easier to read
     {
-        Debug.LogFormat("Character: {0} - {1} EXP", this.name, this.experience);
-        // Prints the debug logs
+        Debug.LogFormat("Character: {0} - {1} EXP", this.name, this.experience); // Prints the debug logs
+        
     }
 }
+
+
+
+

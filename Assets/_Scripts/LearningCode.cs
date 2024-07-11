@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LearningCode : MonoBehaviour
 {
-    // WATCH OUT!: This class is used for instances of the "Character" class
+    // *WATCH OUT!*: This class is used for instances of the "Character Class" and the "Weapon Struct"
     
     void Start()
     {
@@ -32,11 +32,64 @@ public class LearningCode : MonoBehaviour
         // Debug.LogFormat("Heroine: {0} - {1} EXP", heroine.name, heroine.experience); 
         heroine.PrintStatsInfo(); //DRY (using a method again)
 
+        // Using the "struct" Weapon
+        Weapon hauntingBow = new Weapon("Haunting Bow", 150); // Assigning values to constructor parameters
+        hauntingBow.PrintWeaponStatus(); // Using the struct method to display values
+
+        /* 
+        * Type of data by REFERENCE *
+        
+        - A CLASS such as "Character" is a reference type
+        - Variables do not contain the information of their class
+        - Contain a reference or location of the object in the program memory
+        - If there are several variables linking the same reference, a change in one of them affects all the others
+        */
+
+        Character hero2 = hero; // "hero2" is assigned a reference, not data (from "hero")
+        hero.PrintStatsInfo(); 
+        hero2.PrintStatsInfo(); // Both "hero" and "hero2" display the same: "Character: Unknown - 0 EXP" 
+        // "hero" is reserved in a memory location, "hero2" points to the same memory location
+        // Both "hero" and "hero2" point to the same memory location: new Character();
+
+        hero2.name = "Sonic"; // Change of value to "hero2" (for "Unknown" to "Sonic")
+        hero.PrintStatsInfo(); // It displays "Character: Sonic"
+        hero2.PrintStatsInfo(); // It also displays "Character: Sonic"
+        /* Only one value has changed (hero2), but now both (hero and hero2) have the same value (Sonic):
+           - Reference types are not copied when assigned to new variables
+           - Any change to a reference affects all other variables
+           - If the value of "hero" is changed, it will also be moved to "hero2"
+        */
+
+        /* 
+        * Type of data by VALUE *
+        
+        - A STRUCT such as "Weapon" is a value type
+        - Data is stored in the variable without any reference or connection to its location in memory
+        - Useful for creating objects that need to be copied quickly and efficiently
+        - It keeps their identities separate
+        */
+
+        Weapon warBow = hauntingBow; // New variable by copying the previous one
+        // Continue displaying the same values:
+        hauntingBow.PrintWeaponStatus(); // "The weapon Haunting Bow deals 150 damage"
+        warBow.PrintWeaponStatus(); // "The weapon Haunting Bow deals 150 damage"
+
+        // Changes to the new warBow variable:
+        warBow.name = "War Bow"; // New name
+        warBow.damage = 200; // New damage
+        // Displays the changes made previously:
+        hauntingBow.PrintWeaponStatus(); // Retains the first given values ("Hunting Bow, 150")
+        warBow.PrintWeaponStatus(); // Updates the new modified values ("The weapon War Bow deals 200 damage")
+
+
+        /* 
+        * IN SHORT: *
+          - Classes retain references to an object and a change is perpetuated in all references
+          - Structures are copied and modified with their objects separated
+        */
+
+
     }
 
-    
-    void Update()
-    {
-        
-    }
+   
 }
