@@ -80,13 +80,21 @@ public class LearningCode : MonoBehaviour
         // Displays the changes made previously:
         hauntingBow.PrintWeaponStatus(); // Retains the first given values ("Hunting Bow, 150")
         warBow.PrintWeaponStatus(); // Updates the new modified values ("The weapon War Bow deals 200 damage")
-
-
+        
         /* 
         * IN SHORT: *
           - Classes retain references to an object and a change is perpetuated in all references
           - Structures are copied and modified with their objects separated
         */
+
+        Weapon greatSword = new Weapon("Great Sword", 500); // Example variable to use in "Warrior" instance
+
+        // Character Constructor -> Warrior Contructor -> Use it in here
+        Warrior scottishWarrior = new Warrior("William Wallace", greatSword); // Invoking the "Warrior" Constructor
+        // The variable scottishWarrior is also a "Character"
+        // *USE OF THE COMPOSITION: The variable greatSowrd as parameter from the "Warrior" constructor
+         
+        scottishWarrior.PrintStatsInfo(); // "Character: William Wallace - 0 EXP"
 
 
     }

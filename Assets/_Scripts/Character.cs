@@ -60,12 +60,23 @@ public class Character
       -DRY (Don't repeat yourself): Avoid repetition of code and encapsulate it in methods
       -Abstraction of functionality: Do it towards a method or function
     */
+    // *Use of Polymorphism*
+    public virtual void PrintStatsInfo() // Used to compress code and make it easier to read
+    {      // virtual keyword, so that "Warrior" (child) can modify statements of this class (parent)
 
-    public void PrintStatsInfo() // Used to compress code and make it easier to read
-    {
         Debug.LogFormat("Character: {0} - {1} EXP", this.name, this.experience); // Prints the debug logs
-        
+
+        // Each ("Character" and "Warrior") has their own version of this method 
     }
+
+    
+    // *ENCAPSULATION*
+    // Defines the level of accessibility of an object's variables and methods from the external code
+    private void Reset() // Not accessible from other classes due to its level of protection (private) 
+    {
+        this.name = "Unknown"; // Resets default values. 
+        this.experience = 0;
+    } 
 }
 
 
