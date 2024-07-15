@@ -1,18 +1,23 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
 using UnityEngine;
 
 public class VariablesAndMethods : MonoBehaviour
 {
+    //*COMMENTS*
+    // Three types: // or /**/ and /// 
     // This is an only one line remark
     /* This is an
      over one
      line remark */
+    /// This is a method summary
 
     
     /* CLASSES. Sintax:
     
-    accessModifier class UniqueName
+    accessModifier class UniqueName : Possible Inheritance (like MonoBehaviour)
     {
         Variables
         Methods   
@@ -29,12 +34,15 @@ public class VariablesAndMethods : MonoBehaviour
      * Semicolon */
     
     // Example: accessModifier dataType uniqueName = value;
+
     public int currentAge = 35;
     private int addedAge; // Default value = 0
 
     public float pi = 3.14f; // Default value = 0.0f
     public string firstName = "Erik"; // Default value = null
     public bool isStudying = true; // Default value = false
+
+    // *Placeholders: Temporary value used to indicate that an actual value is expected at that location
     
     // CASTINGS AND CONVERSIONS 
     private float implicitConversion = 5; // 5.0f (Int number is made like a float)
@@ -57,6 +65,9 @@ public class VariablesAndMethods : MonoBehaviour
     
     // 5+4-3/2*1 = 8
     // 5+(4-3)/2*1 = 5  (Logical order of operations: First what's inside the brackets)
+
+    // *DOT NOTATION*: Dot syntax for accessing class, methods, variables, etc. 
+    // Example: VariablesAndMethod.Arithmetic().currentvalue;
 
     void Arithmetic()
     {
@@ -81,8 +92,9 @@ public class VariablesAndMethods : MonoBehaviour
         Debug.Log($"This string has variables such as {firstName} or {pi} inserted inside it"); // Usually used 
         Debug.Log("This string has variables such as " + firstName + " or " + pi + " inserted inside it");
 
-        ComputeAge();
+        ComputeAge(); // Call for a method
         CreateCharacter();
+        AddTwo(1,2); // Call for a method with parameters and return value
 
         int characterLevel = 50; // Variable to use as parameter of the method with the return value
         int newLevel = CreateCharacter("Lloyd Irving", characterLevel); // Save the return value in a variable. 
@@ -125,6 +137,19 @@ public class VariablesAndMethods : MonoBehaviour
     void ComputeAge()
     {
         Debug.Log(currentAge + addedAge);
+    }
+
+    // Summary example with input parameters and return value:
+
+    /// <summary>
+    /// This method adds two numbers
+    /// </summary>
+    /// <param name="a">First addend</param>
+    /// <param name="b">Second addend</param>
+    /// <returns>Sum of the input parameters</returns>
+    int AddTwo(int a, int b)
+    {
+        return a + b;
     }
     
     // TODO: Used when something has not been done previously for any reason and show the task with "to do" 
