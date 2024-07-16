@@ -28,13 +28,14 @@ public class VariablesAndMethods : MonoBehaviour
     
     /* VARIABLES:
      * Access Modifier (public / private / protected / internal)
-     * Data type (byte /int / float / double / string / bool)
+     * Data type (byte /int / float / double / string / bool / other)
      * Variable name
      * Set default value (Optional)
      * Semicolon */
     
     // Example: accessModifier dataType uniqueName = value;
-
+    
+    
     public int currentAge = 35;
     private int addedAge; // Default value = 0
 
@@ -45,9 +46,10 @@ public class VariablesAndMethods : MonoBehaviour
     // *Placeholders: Temporary value used to indicate that an actual value is expected at that location
     
     // CASTINGS AND CONVERSIONS 
-    private float implicitConversion = 5; // 5.0f (Int number is made like a float)
-    private int explicitConversion = (int) 3.14; // 3 (loses part of its value)
-    private string test = 150.ToString(); // "150" (Number like a string)
+    private float implicitConversion = 5; // Implicit Casting: 5.0f (Int number is made as a float)
+    private int explicitConversion = (int) 3.14; // Explicit Casting (dataType): 3 (loses part of its value)
+    private string test = 150.ToString(); // "150" Method ToString (Number like a string)
+    
     
     // Variables are always in Camel Case (lowercase + uppercase)
     private int maxHealth = 100; // Example
@@ -61,14 +63,13 @@ public class VariablesAndMethods : MonoBehaviour
      / Division
      * Multiplication
      + Addition (sum)
-     - Subtraction */
+     - Subtraction
+     % Remainder (of a division)  */
     
     // 5+4-3/2*1 = 8
     // 5+(4-3)/2*1 = 5  (Logical order of operations: First what's inside the brackets)
 
-    // *DOT NOTATION*: Dot syntax for accessing class, methods, variables, etc. 
-    // Example: VariablesAndMethod.Arithmetic().currentvalue;
-
+    
     void Arithmetic()
     {
         //Assignment operator: =
@@ -78,7 +79,7 @@ public class VariablesAndMethods : MonoBehaviour
         currentValue *= 2; // Implicit assignment (72) -Usually used-
         
         // String addition (Concatenation):
-        string fullName = "Erik " + " Pan";
+        string fullName = "Erik " + "Pan";
         Debug.Log(fullName);
     }
     
@@ -103,6 +104,8 @@ public class VariablesAndMethods : MonoBehaviour
 
         Debug.Log(CreateCharacter("Garnet", characterLevel)); // Return the value directly to the method
 
+        // *DOT NOTATION*: Dot syntax for accessing class, methods, variables, etc. 
+        // Example: VariablesAndMethod.Arithmetic().currentvalue;
     }
 
     // Update is called once per frame
@@ -159,7 +162,8 @@ public class VariablesAndMethods : MonoBehaviour
         // SCOPE VISIBILITY OF VARIABLES: Local Scope. Only usable inside this method
         string characterClass = "Viking Warrior";
         int characterHealth = 200;
-        // Applicable to other scope types (loops, conditionals, etc.)
+
+        // *Local Scopes: Applicable to other scope types (loops, conditionals, etc.)
         
         Debug.Log(characterName + " is a " + characterClass + " who has " + characterHealth + " points of life.");
         // characterName usable in any field of this class, characterClass and characterHealth only in this method
