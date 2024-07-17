@@ -123,7 +123,7 @@ public class VariablesAndMethods : MonoBehaviour
     * Each method has its own SIGNATURE
      
     - Declaration / Definition:
-    accesModifier return UniqueName(parameterType parameterName)
+    accesModifier returnValue UniqueName(parameterType parameterName)
     {
         method body
     } 
