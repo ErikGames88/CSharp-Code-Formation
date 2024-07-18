@@ -61,7 +61,7 @@ public class LoopStatements : MonoBehaviour
     */
     
     // LIST USED FOR EXAMPLES
-    List<string> vikingsCharacters = new List<string>() {"Ragnar", "Rollo", "Lagertha", "Floki", "Björn"}; // List
+    List<string> vikingCharacters = new List<string>() {"Ragnar", "Rollo", "Lagertha", "Floki", "Björn"}; // List
 
     // DICTIONARY USED FOR EXAMPLES
     Dictionary<string, int> itemsPrice = new Dictionary<string, int>() 
@@ -77,13 +77,13 @@ public class LoopStatements : MonoBehaviour
     {
         // FOR: Checking the whole list
 
-        for (int i = 0; i < vikingsCharacters.Count; i++)
+        for (int i = 0; i < vikingCharacters.Count; i++)
         {
-            Debug.LogFormat("Index: {0} - {1}", i, vikingsCharacters[i]); // Print values from the list
+            Debug.LogFormat("Index: {0} - {1}", i, vikingCharacters[i]); // Print values from the list
             // Index: 0- Ragnar, 1- Rollo, 2- Lagertha, 3- Floki, 4- Björn
 
             // Search for a specific member in the list
-            if(vikingsCharacters[i] == "Lagertha")
+            if(vikingCharacters[i] == "Lagertha")
             {
                 Debug.Log("The famous shield maiden is here!"); 
                 // Index: 0- Ragnar, 1- Rollo, The famous shield maiden is here!
@@ -93,7 +93,7 @@ public class LoopStatements : MonoBehaviour
 
         // FOREACH: Checking the whole list
 
-        foreach (string character in vikingsCharacters) // Each element in the collection is stored in a variable
+        foreach (string character in vikingCharacters) // Each element in the collection is stored in a variable
         {
             Debug.LogFormat("{0} is ready for battle!", character); // All elements are displayed 
         }
