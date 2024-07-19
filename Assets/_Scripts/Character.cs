@@ -6,6 +6,15 @@ public class Character
 {
     /*
     *WATCH OUT!*: "LearningCode" is the other class used for this template to create "characters"
+    
+    *** CLASS SYNTAX: 
+
+    accessModifier class UniqueName
+    {
+        Variables
+        Constructors
+        Methods
+    }
 
     * It is declared with the keyword "class" and an unique name (Character)
     * Empty class not inherited from MonoBehaviour

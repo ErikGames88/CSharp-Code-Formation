@@ -20,6 +20,16 @@ public struct Weapon
         - Constant variable: the value does not change. Example: pi number ("const" modifier)
     - Constructors must always have parameters
     - There is a default constructor that automatically sets all variables to default values based on their type
+
+    *** STRUCT SYNTAX: 
+
+    accessModifier struct UniqueName
+    {
+        Variables
+        Constructors
+        Methods
+    }
+
     */
 
     // FIELDS OR PROPERTIES
